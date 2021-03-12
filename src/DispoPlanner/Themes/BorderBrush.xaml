@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DispoPlanner"
+                    xmlns:converters="clr-namespace:DispoPlanner.Converters">
+
+    <converters:ColorConverter x:Key="ColorConverter"/>
+
+    <SolidColorBrush x:Key="BorderBrushSolid" Color="{Binding Path=(local:BorderAssist.BorderColor), RelativeSource={RelativeSource Self}}" local:BorderAssist.BorderColor="Red"/>
+
+    <DrawingBrush x:Key="BorderBrushDotted" Viewport="0, 0, 8, 8" ViewportUnits="Absolute" TileMode="Tile">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <GeometryDrawing Brush="{Binding Path=(local:BorderAssist.BorderColor), RelativeSource={RelativeSource AncestorType=DrawingBrush}, Converter={StaticResource ColorConverter}}" local:BorderAssist.BorderColor="Red">
+                    <GeometryDrawing.Geometry>
+                        <GeometryGroup>
+                            <RectangleGeometry Rect="0, 0, 50, 50"/>
+                            <RectangleGeometry Rect="50, 50, 50, 50"/>
+                        </GeometryGroup>
+                    </GeometryDrawing.Geometry>
+                </GeometryDrawing>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+</ResourceDictionary>
