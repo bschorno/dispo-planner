@@ -18,7 +18,7 @@ namespace DispoPlanner
         /// </summary>
         static BorderAssist()
         {
-            ResourceDictionary resourceDictionary = new ResourceDictionary() { Source = new Uri("pack://application:,,,/TEST.WpfPlanner;component/Themes/BorderBrush.xaml") };
+            ResourceDictionary resourceDictionary = new ResourceDictionary() { Source = new Uri("pack://application:,,,/DispoPlanner;component/Themes/BorderBrush.xaml") };
             BorderBrushes = new Dictionary<BorderStyle, Brush>()
             {
                 { BorderStyle.Solid, (SolidColorBrush)resourceDictionary["BorderBrushSolid"] },

@@ -1,0 +1,26 @@
+﻿<Window x:Class="DispoPlanner.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DispoPlanner.Demo"
+        xmlns:dp="clr-namespace:DispoPlanner;assembly=DispoPlanner"
+        mc:Ignorable="d"
+        Height="1080" 
+        Width="1920"
+        WindowState="Maximized"
+        Title="Dispo Planner Demo">
+    <Grid>
+
+        <dp:Planner Grid.Row="2" Grid.Column="0" x:Name="planner" Title="Disposition" FontFamily="Segoe UI">
+            <dp:Planner.EntityTemplate>
+                <DataTemplate>
+                    <Label FontWeight="Bold" Content="{Binding Name}" Background="#EAEAEA" VerticalContentAlignment="Center"/>
+                </DataTemplate>
+            </dp:Planner.EntityTemplate>
+            <dp:Planner.EntityGroups>
+                <dp:PlannerEntityGroup x:Name="entityGroup" Title="Entity Group1"/>
+            </dp:Planner.EntityGroups>
+        </dp:Planner>       
+    </Grid>
+</Window>
